@@ -1,0 +1,19 @@
+{
+	"name": "graph-client-query",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"ts-node": "ts-node",
+		"start": "ts-node index.ts --transpileOnly",
+		"codegen": "graphclient build",
+		"dev": "graphclient serve-dev"
+	},
+	"dependencies": {
+		"ts-node": "^10.9.1"
+	},
+	"devDependencies": {
+		"@graphprotocol/client-cli": "^3.0.0",
+		"@types/node": "^20.6.0",
+		"typescript": "^5.2.2"
+	}
+}

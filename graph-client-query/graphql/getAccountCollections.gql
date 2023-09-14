@@ -1,0 +1,6 @@
+query GetAccountCollections {
+	accountCollections(first: 10) {
+		id
+		tokenCount
+	}
+}

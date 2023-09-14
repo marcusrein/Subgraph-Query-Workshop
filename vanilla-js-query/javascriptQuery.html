@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>GraphQL Query with Vanilla JS</title>
+		<style>
+			.response {
+				white-space: pre-wrap;
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="response" class="response"></div>
+
+		<script>
+			const query = `
+    query GetAccountCollections {
+		accountCollections(first: 10) {
+			id
+			tokenCount
+		}
+}
+  `;
+
+			fetch(
+				"https://gateway-arbitrum.network.thegraph.com/api/0ab7a83b03a36ac8a536cd8fa19a8ad4/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({ query }),
+				}
+			)
+				.then((response) => response.json())
+				.then((data) => {
+					document.getElementById("response").innerText =
+						JSON.stringify(data, null, 2);
+				})
+				.catch((error) => {
+					console.error("Error:", error);
+					document.getElementById("response").innerText =
+						"Error: " + error.message;
+				});
+		</script>
+	</body>
+</html>
