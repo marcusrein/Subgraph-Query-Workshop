@@ -15,10 +15,22 @@ const client = new ApolloClient({
 
 const QUERY = gql`
 	query MyQuery {
-		weeklyCollectionSnapshots(first: 10) {
-			bottomSale
-			timestamp
-			topSale
+		accountCollections(
+			orderBy: tokenCount
+			orderDirection: desc
+			first: 5
+		) {
+			account {
+				id
+				tokens(first: 1) {
+					collection {
+						name
+						symbol
+						totalVolume
+					}
+				}
+			}
+			tokenCount
 		}
 	}
 `;

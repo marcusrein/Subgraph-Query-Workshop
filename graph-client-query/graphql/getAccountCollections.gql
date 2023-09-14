@@ -1,6 +1,15 @@
 query GetAccountCollections {
-	accountCollections(first: 10) {
-		id
+	accountCollections(orderBy: tokenCount, orderDirection: desc, first: 5) {
+		account {
+			id
+			tokens(first: 1) {
+				collection {
+					name
+					symbol
+					totalVolume
+				}
+			}
+		}
 		tokenCount
 	}
 }
