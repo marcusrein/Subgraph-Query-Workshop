@@ -8,7 +8,7 @@ import {
 import { gql } from "@apollo/client";
 
 const client = new ApolloClient({
-	uri: "https://gateway-arbitrum.network.thegraph.com/api/0ab7a83b03a36ac8a536cd8fa19a8ad4/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow",
+	uri: "https://gateway-arbitrum.network.thegraph.com/api/<API_KEY>/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow",
 
 	cache: new InMemoryCache(),
 });

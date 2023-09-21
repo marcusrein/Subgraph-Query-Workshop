@@ -2603,7 +2603,7 @@ const subgraphEthereum721Transforms = [];
 const additionalTypeDefs = [] as any[];
 const subgraphEthereum721Handler = new GraphqlHandler({
               name: "SubgraphEthereum721",
-              config: {"endpoint":"https://gateway-arbitrum.network.thegraph.com/api/0ab7a83b03a36ac8a536cd8fa19a8ad4/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow"},
+              config: {"endpoint":"https://gateway-arbitrum.network.thegraph.com/api/<API_KEY>/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow"},
               baseDir,
               cache,
               pubsub,
