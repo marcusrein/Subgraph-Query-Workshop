@@ -1,18 +1,22 @@
 # Subgraph Query Workshop 2023
 
+## [Workshop Slides](https://docs.google.com/presentation/d/1U64NOtOCXJEi9J3jmM0DhpuozgZg-eXoGE8KCZ2cczQ/edit?usp=sharing)
+
+[![slide1](./Slide1.png)](https://docs.google.com/presentation/d/1U64NOtOCXJEi9J3jmM0DhpuozgZg-eXoGE8KCZ2cczQ/edit?usp=sharing)
+
 ## Steps to send queries
 
 1. Create an API key in [Subgraph Studio](https://www.thegraph.com/studio)
-2. Search `<API_KEY>` in the files and replace all `<API_KEY>`'s' with your new API Key
+2. Search `<API_KEY>` in this repo and replace all `<API_KEY>`'s' with your new API Key
 3. Send your demo queries!
 
 ---
 
 ## Subgraph Being Queried
 
-[721 Tracker Ethereum Subgraph](https://thegraph.com/explorer/subgraphs/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow?view=Overview&chain=arbitrum-one)
+[![tracker](./Tracker.png)](https://thegraph.com/explorer/subgraphs/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow?view=Overview&chain=arbitrum-one)
 
-Endpoint:
+## Subgraph's Endpoint
 
 `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow`
 
@@ -50,7 +54,7 @@ The demo query retrieves the top 5 accounts with the most tokens in specific col
 
 ## Send a Graph Client Query
 
--   See this [walkthrough video](https://www.youtube.com/watch?v=ZsRAmyUtvwg) for a great overview of graph-client
+-   See this [walkthrough video](https://www.youtube.com/watch?v=ZsRAmyUtvwg) for a great overview of [graph-client](https://github.com/graphprotocol/graph-client)
 
 1. `cd graph-client-query`
 2. `npm install`
@@ -62,3 +66,13 @@ The demo query retrieves the top 5 accounts with the most tokens in specific col
 
 1. `npm install`
 2. `npm run start` to send test query and see responses at http://localhost:3000
+
+## More Querying Options
+
+### Playgrounds for Subgraph Data Analytics
+
+[![playgrounds](./Playgrounds.png)](https://playgrounds.network/)
+
+### DappLooker for No-Code Dashboards
+
+[![dapplooker](./DappLooker.png)](https://dapplooker.com/home)
