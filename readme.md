@@ -49,7 +49,7 @@ The demo query retrieves the top 10 accounts where the total supply is greater t
 
 ## Send Query Using `graph-client`
 
--   See this excellent [walkthrough video](https://www.youtube.com/watch?v=ZsRAmyUtvwg) for an overview of [graph-client](https://github.com/graphprotocol/graph-client)
+### See this excellent [walkthrough video](https://www.youtube.com/watch?v=ZsRAmyUtvwg) for an overview of [graph-client](https://github.com/graphprotocol/graph-client)
 
 1. `cd graph-client-query`
 2. `npm install`
