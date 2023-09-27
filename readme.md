@@ -20,6 +20,8 @@
 
 `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow`
 
+## Demo Query
+
 The demo query retrieves the top 10 accounts where the total supply is greater than 500.
 
 ```graphql
@@ -33,19 +35,19 @@ The demo query retrieves the top 10 accounts where the total supply is greater t
 }
 ```
 
-## Send a Vanilla JS Query
+## Send Query using Vanilla JS
 
 1. `cd vanilla-js-query`
 2. `open javascriptQuery.html`
 
-## Send a Python Query
+## Send Query Using Python
 
 1. `cd flask-query`
 2. `pip install Flask requests`
 3. `python app.py`
 4. Open the development server that appears in the terminal to see the query response: (http://127.0.0.1:5000)
 
-## Send a Graph Client Query
+## Send Query Using `graph-client`
 
 -   See this excellent [walkthrough video](https://www.youtube.com/watch?v=ZsRAmyUtvwg) for an overview of [graph-client](https://github.com/graphprotocol/graph-client)
 
@@ -55,7 +57,7 @@ The demo query retrieves the top 10 accounts where the total supply is greater t
 4. To send test queries through our browser, run `npm run dev` to set up GraphQL explorer.
 5. To integrate graph-client into our dapp, run `npm run codegen` to build an a new SDK.
 
-## Send a React Apollo Query
+## Send Query Using React Apollo
 
 1. `cd react-apollo-query`
 2. `npm install`
