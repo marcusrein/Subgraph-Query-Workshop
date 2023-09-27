@@ -6,22 +6,14 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     query = """
-        {
-  accountCollections(orderBy: tokenCount, orderDirection: desc, first: 5) {
-    account {
-      id
-      tokens(first: 1) {
-        collection {
-          name
-          symbol
-          totalVolume
-        }
-      }
-    }
-    tokenCount
+       			{
+  collections(first: 10, where: {totalSupply_gt: "500"}) {
+    id
+    name
+    symbol
+    totalSupply
   }
 }
-
     """
     
     url = "https://gateway-arbitrum.network.thegraph.com/api/<API_KEY>/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow"

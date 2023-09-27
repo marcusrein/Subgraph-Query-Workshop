@@ -5,7 +5,7 @@ const { GetAccountCollections } = getBuiltGraphSDK();
 async function main(): Promise<void> {
 	try {
 		const response = await GetAccountCollections();
-		console.log(response.accountCollections);
+		console.log(response.collections);
 	} catch (error) {
 		console.error(error);
 	}

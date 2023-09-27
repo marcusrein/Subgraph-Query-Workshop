@@ -20,22 +20,15 @@
 
 `https://gateway-arbitrum.network.thegraph.com/api/[api-key]/subgraphs/id/CBf1FtUKFnipwKVm36mHyeMtkuhjmh4KHzY3uWNNq5ow`
 
-The demo query retrieves the top 5 accounts with the most tokens in specific collections, along with the first token's collection details such as name, symbol, and total volume for each of these top accounts.
+The demo query retrieves the top 10 accounts where the total supply is greater than 500.
 
 ```graphql
 {
-	accountCollections(orderBy: tokenCount, orderDirection: desc, first: 5) {
-		account {
-			id
-			tokens(first: 1) {
-				collection {
-					name
-					symbol
-					totalVolume
-				}
-			}
-		}
-		tokenCount
+	collections(first: 10, where: { totalSupply_gt: "500" }) {
+		id
+		name
+		symbol
+		totalSupply
 	}
 }
 ```
@@ -54,18 +47,19 @@ The demo query retrieves the top 5 accounts with the most tokens in specific col
 
 ## Send a Graph Client Query
 
--   See this [walkthrough video](https://www.youtube.com/watch?v=ZsRAmyUtvwg) for a great overview of [graph-client](https://github.com/graphprotocol/graph-client)
+-   See this excellent [walkthrough video](https://www.youtube.com/watch?v=ZsRAmyUtvwg) for an overview of [graph-client](https://github.com/graphprotocol/graph-client)
 
 1. `cd graph-client-query`
 2. `npm install`
-3. `npm run dev` to set up GraphQL explorer (See terminal for link). We can now send test queries from our localhost
-4. `npm run codegen` to build an a new SDK that we can integrate with our dapp
-5. `npm run start` to send our test query and see responses in the terminal.
+3. `npm run start` to send our test query and see responses in the terminal.
+4. To send test queries through our browser, run `npm run dev` to set up GraphQL explorer.
+5. To integrate graph-client into our dapp, run `npm run codegen` to build an a new SDK.
 
 ## Send a React Apollo Query
 
-1. `npm install`
-2. `npm run start` to send test query and see responses at http://localhost:3000
+1. `cd react-apollo-query`
+2. `npm install`
+3. `npm run start` to send test query and see responses at http://localhost:3000
 
 ## More Querying Options
 

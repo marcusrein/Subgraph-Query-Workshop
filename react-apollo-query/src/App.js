@@ -15,22 +15,11 @@ const client = new ApolloClient({
 
 const QUERY = gql`
 	query MyQuery {
-		accountCollections(
-			orderBy: tokenCount
-			orderDirection: desc
-			first: 5
-		) {
-			account {
-				id
-				tokens(first: 1) {
-					collection {
-						name
-						symbol
-						totalVolume
-					}
-				}
-			}
-			tokenCount
+		collections(first: 10, where: { totalSupply_gt: "500" }) {
+			id
+			name
+			symbol
+			totalSupply
 		}
 	}
 `;
