@@ -72,3 +72,6 @@ The demo query retrieves the top 10 accounts where the total supply is greater t
 ### DappLooker for No-Code Dashboards
 
 [![dapplooker](./DappLooker.png)](https://dapplooker.com/home)
+
+### [Learn How to Design and Optimize GraphQL Queries](https://thegraph.com/docs/en/querying/querying-best-practices/)
+
