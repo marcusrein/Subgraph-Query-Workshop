@@ -1,4 +1,4 @@
-# Subgraph Query Workshop 2023
+# Subgraph Query Workshop
 
 ## [Workshop Slides](https://docs.google.com/presentation/d/1U64NOtOCXJEi9J3jmM0DhpuozgZg-eXoGE8KCZ2cczQ/edit?usp=sharing)
 
